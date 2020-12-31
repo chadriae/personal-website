@@ -1,20 +1,31 @@
-import anime from '../animejs/lib/anime.es.js';
-
-
 const pictureOfMe = document.querySelector("#me");
+const sideNav = document.querySelector("#sidenav");
+const text = document.querySelector("#test");
+const about = document.querySelector("#about");
+let clickCount = 0;
 
-// function on first click to move picture
-// const moveTopLeft = () => {
-//     pictureOfMe.style.margin = "50px 0 0 50px"
-// }
+const showSidebar = () => {
+    sideNav.style.visibility = "visible";
+};
 
+const showMe = () => {
+    text.style.visibility = "visible";
+}
 
-pictureOfMe.addEventListener("click", () => {   
-    // animation to move to top left
-    anime ({
-        targets: pictureOfMe, 
-        translateX: -450, 
-        translateY: -375,
-        duration: 2500
-    })
+pictureOfMe.addEventListener("click", () => {
+    if (clickCount == 0){
+    gsap.to("#me", 3, {margin:'50 0 0 50'});
+    gsap.to("#me", 3, {width:'125'}); 
+    gsap.to("#me", 3, {height:'125'}); 
+    setTimeout(() => {showSidebar()}, 3000);
+    clickCount++;
+    }
+    else {
+
+    }
+})
+
+about.addEventListener("click", () => {
+    showMe();
+    about.innerHTML = "<u>About me</u>"
 })
