@@ -3,6 +3,7 @@
 .body {
   margin: 0;
   font-family: "Roboto Mono", monospace;
+  height: auto;
 }
 
 a:hover {
@@ -37,7 +38,8 @@ a:hover {
 }
 
 #sidenav,
-#test {
+#test,
+#test2 {
   visibility: hidden;
 
   /* height: 100%;
