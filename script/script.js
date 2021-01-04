@@ -33,6 +33,30 @@ const appearanceDelay = (target, time, fromValue, toValue) => {
     gsap.fromTo(target, time, {autoAlpha: fromValue}, {autoAlpha: toValue});
 }
 
+//picture rotation
+const rotatePicture = () => {
+    gsap.fromTo("#me", 2, {rotation: 0}, {rotation: 360});
+}
+
+//return to home page
+const homePage = () => {
+    let x = (window.innerWidth)/2;
+    let y = (window.innerHeight)/2;
+
+    appearanceDelay("#content", 2, 1, 0);
+
+    setTimeout(() => {
+        appearanceDelay("#sidenav", 2, 1, 0);
+    }, 750);
+
+    setTimeout(() => {
+        gsap.to("#me", 3, {margin:`${y}px 0 0 ${x}px`});
+        gsap.to("#me", 3, {width:'250'}); 
+        gsap.to("#me", 3, {height:'250'});
+        }, 1500);
+    clickCount = 0;
+}
+
 
 pictureOfMe.addEventListener("click", () => {
     if (clickCount == 0){
@@ -50,6 +74,7 @@ pictureOfMe.addEventListener("click", () => {
 })
 
 about.addEventListener("click", () => {
+    rotatePicture();
     removeClassUnderline();
     about.classList.add("underline");
     //werkt niet?
@@ -59,6 +84,7 @@ about.addEventListener("click", () => {
 })
 
 resume.addEventListener("click", () => {
+    rotatePicture();
     removeClassUnderline();
     resume.classList.add("underline");
     appearanceDelay("#content", 2, 0, 1);
@@ -66,6 +92,7 @@ resume.addEventListener("click", () => {
 })
 
 projects.addEventListener("click", () => {
+    rotatePicture();
     removeClassUnderline();
     projects.classList.add("underline");
     appearanceDelay("#content", 2, 0, 1);
@@ -74,6 +101,7 @@ projects.addEventListener("click", () => {
 })
 
 interests.addEventListener("click", () => {
+    rotatePicture();
     removeClassUnderline();
     interests.classList.add("underline");
     appearanceDelay("#content", 2, 0, 1);
@@ -81,25 +109,8 @@ interests.addEventListener("click", () => {
     '<iframe src="https://open.spotify.com/embed/playlist/1nIG9kNjrjcMQlCDgxfhlt" width="300" height="900" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>';
 })
 
-//return to home page
-const homePage = () => {
-    let x = (window.innerWidth)/2;
-    let y = (window.innerHeight)/2;
-
-    appearanceDelay("#content", 2, 1, 0);
-
-    setTimeout(() => {
-        appearanceDelay("#sidenav", 2, 1, 0);
-    }, 750);
-    
-    setTimeout(() => {
-        gsap.to("#me", 3, {margin:`${y}px 0 0 ${x}px`});
-        gsap.to("#me", 3, {width:'250'}); 
-        gsap.to("#me", 3, {height:'250'});
-        }, 1500);
-    clickCount = 0;
-}
 
 home.addEventListener("click", () => {
    homePage(); 
+   removeClassUnderline();
 })
