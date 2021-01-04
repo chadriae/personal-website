@@ -21,7 +21,7 @@ a:hover {
   left: 0;
   right: 0;
   margin: auto;
-  border: 1px solid lightgray;
+
   padding: 2px;
 }
 
@@ -41,32 +41,47 @@ a:hover {
 #test,
 #test2 {
   visibility: hidden;
-
-  /* height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: white;
-  overflow-y: hidden;
-  transition: 0.5s;
-  padding-top: 60px;
 }
 
-#sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: black;
-  display: block;
-  transition: 0.3s;
+#header {
+  grid-area: header;
 }
 
-#sidenav #closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px; */
+#pic {
+  grid-area: picture;
+}
+#sidenav {
+  grid-area: menu;
+}
+#content-container {
+  grid-area: main;
+}
+#footer {
+  grid-area: footer;
+}
+
+.body {
+  display: grid;
+  grid-template-areas:
+    "picture picture picture picture picture picture"
+    "menu menu main main main main"
+    "menu menu main main main main"
+    "menu menu main main main main"
+    "footer footer footer footer footer footer";
+  grid-gap: 10px;
+}
+
+@media only screen and (max-width: 900px) {
+  #sidenav {
+    text-align: right;
+  }
+  .body {
+    display: grid;
+    grid-template-areas:
+      "menu menu menu menu menu menu"
+      "main main main main main main"
+      "main main main main main main"
+      "footer footer footer footer footer footer";
+    grid-gap: 10px;
+  }
 }

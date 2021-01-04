@@ -3,40 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/index.css">
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style/index.css">
     <script defer type="module" src="./script/script.js"></script>
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 
 </head>
 <body class="body">
-    <div class="grid grid-cols-6 grid-rows-6 ">
         
-        <div class="" id="pic">
+        <div class="mb-44" id="pic">
             <img id="me" src="images/me3.png">
-            <!-- <span id="tooltip">Click me!</span> -->
         </div>
 
-         <!-- <div class="col-span-6 row-span-1 border"></div> -->
-
-        <!-- <div class="col-span-2 border"></div> -->
-
-        <div class="absolute inset-y-0 left-0 mt-52 ml-12 mb-0 text-xl col-span-2" id="sidenav">
+        <div class="text-xl  ml-4 mr-0" id="sidenav">
             <!-- <a href="javascript:void(0)" id="closebtn">&times;</a><br> -->
-            <a class="sections" id="about" href="#">About me</a><br><br>
-            <a class="sections" id="resume" href="#">Online resume</a><br><br>
-            <a class="sections" id="projects" href="#">Projects</a><br><br>
-            <a class="sections" id="interests" href="#">Interests</a><br><br>
-            <a class="sections" id="social-media" href="#">Social media</a><br><br>
-            <a class="sections" id="contact" href="#">Contact</a><br><br>
-            <a class="sections" id="home" href="#">Back to home</a><br><br>
+            <a class="sections" id="about" href="#">About me</a><br>
+            <a class="sections" id="resume" href="#">Online resume</a><br>
+            <a class="sections" id="projects" href="#">Projects</a><br>
+            <a class="sections" id="interests" href="#">Interests</a><br>
+            <a class="sections" id="social-media" href="#">Social media</a><br>
+            <a class="sections" id="contact" href="#">Contact</a><br>
+            <a class="sections" id="home" href="#">Back to home</a><br>
         </div>
 
-        <div class="col-span-4 ml-24 mt-52" id="content-container">
+        <div class="m-4" id="content-container">
             <p id="content"></p>
         </div>
-    </div>
 
-    <footer class="footer text-gray-400">Made by Christophe Adriaensens &copy; 2020</footer>
+    <footer class="footer text-gray-400" id="footer">Made by Christophe Adriaensens &copy; 2020</footer>
 </body>
 </html> 

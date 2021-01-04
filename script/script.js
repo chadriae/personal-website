@@ -1,4 +1,4 @@
-const pictureOfMe = document.querySelector("#me");
+const pictureOfMe = document.querySelector("#pic");
 const sideNav = document.querySelector("#sidenav");
 const text = document.querySelector("#test");
 
