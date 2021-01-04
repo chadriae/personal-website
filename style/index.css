@@ -52,6 +52,7 @@ a:hover {
 }
 #sidenav {
   grid-area: menu;
+  line-height: 2;
 }
 #content-container {
   grid-area: main;
@@ -71,17 +72,29 @@ a:hover {
   grid-gap: 10px;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 635px) {
   #sidenav {
+    position: absolute;
     text-align: right;
+    right: 0px;
+    max-width: 60%;
+    margin: 25px 10px 0 0;
+    line-height: 1, 5;
   }
+  /* #sidenav br {
+    display: none;
+  } */
+
+  #content-container {
+    margin: 3rem 0 0 0;
+  }
+
   .body {
     display: grid;
-    grid-template-areas:
-      "menu menu menu menu menu menu"
-      "main main main main main main"
-      "main main main main main main"
-      "footer footer footer footer footer footer";
-    grid-gap: 10px;
+    /* grid-template-areas:
+      "menu menu menu "
+      "main main main "
+      "footer footer footer ";
+    grid-gap: 10px; */
   }
 }

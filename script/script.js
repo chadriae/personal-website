@@ -40,8 +40,8 @@ const rotatePicture = () => {
 
 //return to home page
 const homePage = () => {
-    let x = (window.innerWidth)/2;
-    let y = (window.innerHeight)/2;
+    let x = (window.innerWidth - 50)/2;
+    let y = (window.innerHeight -50)/2;
 
     appearanceDelay("#content", 2, 1, 0);
 
